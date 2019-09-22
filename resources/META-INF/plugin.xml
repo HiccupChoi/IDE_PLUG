@@ -1,0 +1,40 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>IDE_Plugin</name>
+  <version>1.0</version>
+  <vendor email="yuhuan07@meituan.com" url="http://www.meituan.com">美团</vendor>
+
+  <description><![CDATA[
+      测试写一个IDEA插件<br>
+      <em>https://www.jianshu.com/p/722841c6d0a9</em>
+    ]]></description>
+
+
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+<!--    <action id="TestTranslation.TranslateAction" class="com.hiccup.test.TranslateAction" text="TransLate"-->
+<!--            description="翻译插件">-->
+<!--      <add-to-group group-id="EditMenu" anchor="first"/>-->
+<!--    </action>-->
+    <action id="ECTranslation" class="com.hiccup.test.ECTranslation" text="Translate">
+      <add-to-group group-id="EditMenu" anchor="first"/>
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift a"/>
+    </action>
+  </actions>
+
+</idea-plugin>
